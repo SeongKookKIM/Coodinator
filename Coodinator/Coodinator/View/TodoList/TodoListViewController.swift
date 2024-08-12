@@ -27,7 +27,7 @@ class TodoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Test Coordinator"
+        self.title = "List"
         self.view.backgroundColor = .systemBackground
         
         setupUI()
@@ -70,5 +70,10 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todoItem = todoListViewModel.todoList[indexPath.row]
+        coordinator?.moveDetail(for: todoItem)
+
+    }
     
 }

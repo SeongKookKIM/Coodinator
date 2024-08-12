@@ -19,6 +19,9 @@
 		04937AF72C69E6420099D3EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04937AF62C69E6420099D3EE /* SnapKit */; };
 		04937AF92C69E6B80099D3EE /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */; };
 		04937AFC2C69E78D0099D3EE /* TodoListVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */; };
+		04937AFF2C69EF880099D3EE /* DetailTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AFE2C69EF880099D3EE /* DetailTodoViewController.swift */; };
+		04937B012C69EF9A0099D3EE /* DetailTodoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */; };
+		04937B042C69F6C00099D3EE /* DetailTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B032C69F6C00099D3EE /* DetailTodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		04937AF32C69E2E10099D3EE /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 		04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
 		04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListVewModel.swift; sourceTree = "<group>"; };
+		04937AFE2C69EF880099D3EE /* DetailTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoViewController.swift; sourceTree = "<group>"; };
+		04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoCoordinator.swift; sourceTree = "<group>"; };
+		04937B032C69F6C00099D3EE /* DetailTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 		04937AE82C69DC990099D3EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04937AFD2C69EF620099D3EE /* Detail */,
 				04937AEF2C69E0590099D3EE /* TodoList */,
 			);
 			path = View;
@@ -111,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */,
+				04937B032C69F6C00099D3EE /* DetailTodoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -146,6 +154,23 @@
 				04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		04937AFD2C69EF620099D3EE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04937B022C69EF9D0099D3EE /* Coordinator */,
+				04937AFE2C69EF880099D3EE /* DetailTodoViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		04937B022C69EF9D0099D3EE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,12 +252,15 @@
 				04937AD72C69DA6E0099D3EE /* TodoListViewController.swift in Sources */,
 				04937AEE2C69DF160099D3EE /* AppCoordinator.swift in Sources */,
 				04937AEC2C69DEE20099D3EE /* Coodinator.swift in Sources */,
+				04937AFF2C69EF880099D3EE /* DetailTodoViewController.swift in Sources */,
 				04937AF92C69E6B80099D3EE /* TodoListTableViewCell.swift in Sources */,
+				04937B042C69F6C00099D3EE /* DetailTodoViewModel.swift in Sources */,
 				04937AD32C69DA6E0099D3EE /* AppDelegate.swift in Sources */,
 				04937AF22C69E0840099D3EE /* TodoListCoordinator.swift in Sources */,
 				04937AFC2C69E78D0099D3EE /* TodoListVewModel.swift in Sources */,
 				04937AF42C69E2E10099D3EE /* TodoListModel.swift in Sources */,
 				04937AD52C69DA6E0099D3EE /* SceneDelegate.swift in Sources */,
+				04937B012C69EF9A0099D3EE /* DetailTodoCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

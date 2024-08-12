@@ -11,7 +11,7 @@ class TodoListTableViewCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -19,7 +19,7 @@ class TodoListTableViewCell: UITableViewCell {
     
     private let contentLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -54,7 +54,7 @@ class TodoListTableViewCell: UITableViewCell {
             guard let self = self else { return }
             label.top.equalTo(titleLabel.snp.bottom).offset(10)
             label.left.equalTo(self.contentView.snp.left).offset(10)
-            label.right.equalTo(self.contentView.snp.right).offset(-10) 
+            label.right.equalTo(self.contentView.snp.right).offset(-10)
             label.bottom.equalTo(self.contentView.snp.bottom).offset(-10)
         }
     }

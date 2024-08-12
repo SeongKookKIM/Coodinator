@@ -23,4 +23,9 @@ class TodoListCoordinator: Coordinator {
         navigationController.pushViewController(todoListVC, animated: true)
         self.todoListViewController = todoListVC
     }
+    
+    func moveDetail(for todoItem: TodoListModel) {
+        let detailTodoCoordinator = DetailTodoCoordinator(navigationController: navigationController, todoItem: todoItem)
+        detailTodoCoordinator.start()
+    }
 }
