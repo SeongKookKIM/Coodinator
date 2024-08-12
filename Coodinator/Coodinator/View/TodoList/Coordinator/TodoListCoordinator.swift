@@ -31,7 +31,14 @@ class TodoListCoordinator: Coordinator {
     
     func addTodo() {
         let addTodoCoordinator = AddTodoCoordinator(navigationController: navigationController)
+        addTodoCoordinator.delegate = self
         addTodoCoordinator.start()
     }
 
+}
+
+extension TodoListCoordinator: AddTodoCoordinatorDelegate {
+    func addTodoCoordinator(_ coordinator: AddTodoCoordinator, didAddTodo todo: TodoListModel) {
+        todoListViewController?.todoListViewModel.addTodoList(item: todo)
+    }
 }

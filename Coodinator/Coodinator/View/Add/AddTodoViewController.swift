@@ -10,7 +10,7 @@ import UIKit
 class AddTodoViewController: UIViewController {
     
     var coordinator: AddTodoCoordinator?
-    var todoListViewModel = TodoListVewModel()
+    var addTodoHandler: ((TodoListModel) -> Void)?
     
     private let titleTF: UITextField = {
         let textField = UITextField()
@@ -75,10 +75,10 @@ class AddTodoViewController: UIViewController {
         
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
         setupActions()
     }
@@ -124,8 +124,8 @@ class AddTodoViewController: UIViewController {
     private func setupActions() {
         submitBtn.addAction(UIAction { [weak self] _ in
             guard let self = self else { return }
-            self.todoListViewModel.addTodoList(item: TodoListModel(id: UUID(), title: self.titleTF.text ?? "", content: self.contentTF.text ?? ""))
-            
+            let newTodo = TodoListModel(id: UUID(), title: self.titleTF.text ?? "", content: self.contentTF.text ?? "")
+            self.addTodoHandler?(newTodo)
             self.coordinator?.dismiss()
         }, for: .touchUpInside)
         

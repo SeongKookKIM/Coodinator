@@ -7,15 +7,13 @@
 
 import UIKit
 import SnapKit
-
-protocol AddTodoViewControllerDelegate: AnyObject {
-    func didAddTodoItem(_ todoItem: TodoListModel)
-}
+import Combine
 
 class TodoListViewController: UIViewController {
     
     var coordinator: TodoListCoordinator?
     var todoListViewModel = TodoListVewModel()
+    private var cancellables = Set<AnyCancellable>()
     
     // tableView
     private var tableView: UITableView = {
@@ -36,6 +34,7 @@ class TodoListViewController: UIViewController {
         
         setupUI()
         setupTapBar()
+        setupBindingData()
     }
 
     private func setupUI() {
@@ -67,6 +66,15 @@ class TodoListViewController: UIViewController {
     
     @objc func addButtonTapped() {
         coordinator?.addTodo()
+    }
+    
+    private func setupBindingData() {
+        todoListViewModel.$todoList
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+            }
+            .store(in: &cancellables)
     }
 
 }
