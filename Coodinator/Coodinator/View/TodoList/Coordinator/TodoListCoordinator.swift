@@ -28,4 +28,10 @@ class TodoListCoordinator: Coordinator {
         let detailTodoCoordinator = DetailTodoCoordinator(navigationController: navigationController, todoItem: todoItem)
         detailTodoCoordinator.start()
     }
+    
+    func addTodo() {
+        let addTodoCoordinator = AddTodoCoordinator(navigationController: navigationController)
+        addTodoCoordinator.start()
+    }
+
 }

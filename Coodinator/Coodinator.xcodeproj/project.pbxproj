@@ -22,6 +22,8 @@
 		04937AFF2C69EF880099D3EE /* DetailTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AFE2C69EF880099D3EE /* DetailTodoViewController.swift */; };
 		04937B012C69EF9A0099D3EE /* DetailTodoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */; };
 		04937B042C69F6C00099D3EE /* DetailTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B032C69F6C00099D3EE /* DetailTodoViewModel.swift */; };
+		04937B072C69FB8A0099D3EE /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B062C69FB8A0099D3EE /* AddTodoViewController.swift */; };
+		04937B0A2C69FBA10099D3EE /* AddTodoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937B092C69FBA10099D3EE /* AddTodoCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		04937AFE2C69EF880099D3EE /* DetailTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoViewController.swift; sourceTree = "<group>"; };
 		04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoCoordinator.swift; sourceTree = "<group>"; };
 		04937B032C69F6C00099D3EE /* DetailTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoViewModel.swift; sourceTree = "<group>"; };
+		04937B062C69FB8A0099D3EE /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
+		04937B092C69FBA10099D3EE /* AddTodoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		04937AE82C69DC990099D3EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04937B052C69FB760099D3EE /* Add */,
 				04937AFD2C69EF620099D3EE /* Detail */,
 				04937AEF2C69E0590099D3EE /* TodoList */,
 			);
@@ -169,6 +174,23 @@
 			isa = PBXGroup;
 			children = (
 				04937B002C69EF9A0099D3EE /* DetailTodoCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		04937B052C69FB760099D3EE /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				04937B082C69FB8D0099D3EE /* Coordinator */,
+				04937B062C69FB8A0099D3EE /* AddTodoViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		04937B082C69FB8D0099D3EE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				04937B092C69FBA10099D3EE /* AddTodoCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -255,11 +277,13 @@
 				04937AFF2C69EF880099D3EE /* DetailTodoViewController.swift in Sources */,
 				04937AF92C69E6B80099D3EE /* TodoListTableViewCell.swift in Sources */,
 				04937B042C69F6C00099D3EE /* DetailTodoViewModel.swift in Sources */,
+				04937B0A2C69FBA10099D3EE /* AddTodoCoordinator.swift in Sources */,
 				04937AD32C69DA6E0099D3EE /* AppDelegate.swift in Sources */,
 				04937AF22C69E0840099D3EE /* TodoListCoordinator.swift in Sources */,
 				04937AFC2C69E78D0099D3EE /* TodoListVewModel.swift in Sources */,
 				04937AF42C69E2E10099D3EE /* TodoListModel.swift in Sources */,
 				04937AD52C69DA6E0099D3EE /* SceneDelegate.swift in Sources */,
+				04937B072C69FB8A0099D3EE /* AddTodoViewController.swift in Sources */,
 				04937B012C69EF9A0099D3EE /* DetailTodoCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

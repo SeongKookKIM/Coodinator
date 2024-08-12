@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol AddTodoViewControllerDelegate: AnyObject {
+    func didAddTodoItem(_ todoItem: TodoListModel)
+}
+
 class TodoListViewController: UIViewController {
     
     var coordinator: TodoListCoordinator?
@@ -31,6 +35,7 @@ class TodoListViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
         
         setupUI()
+        setupTapBar()
     }
 
     private func setupUI() {
@@ -51,6 +56,17 @@ class TodoListViewController: UIViewController {
             table.bottom.equalTo(safeArea.snp.bottom)
             table.left.equalTo(safeArea.snp.left)
         }
+    }
+    
+    private func setupTapBar() {
+        let addButton = UIBarButtonItem(title: "추가", style: .done, target: self, action: #selector(addButtonTapped))
+        addButton.tintColor = .systemBlue
+        
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc func addButtonTapped() {
+        coordinator?.addTodo()
     }
 
 }
@@ -77,3 +93,6 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
+
