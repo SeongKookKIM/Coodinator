@@ -15,6 +15,10 @@
 		04937AEC2C69DEE20099D3EE /* Coodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AEB2C69DEE20099D3EE /* Coodinator.swift */; };
 		04937AEE2C69DF160099D3EE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AED2C69DF160099D3EE /* AppCoordinator.swift */; };
 		04937AF22C69E0840099D3EE /* TodoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AF12C69E0840099D3EE /* TodoListCoordinator.swift */; };
+		04937AF42C69E2E10099D3EE /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AF32C69E2E10099D3EE /* TodoListModel.swift */; };
+		04937AF72C69E6420099D3EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04937AF62C69E6420099D3EE /* SnapKit */; };
+		04937AF92C69E6B80099D3EE /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */; };
+		04937AFC2C69E78D0099D3EE /* TodoListVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,9 @@
 		04937AEB2C69DEE20099D3EE /* Coodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodinator.swift; sourceTree = "<group>"; };
 		04937AED2C69DF160099D3EE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		04937AF12C69E0840099D3EE /* TodoListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCoordinator.swift; sourceTree = "<group>"; };
+		04937AF32C69E2E10099D3EE /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
+		04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListVewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04937AF72C69E6420099D3EE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +68,7 @@
 		04937AD12C69DA6E0099D3EE /* Coodinator */ = {
 			isa = PBXGroup;
 			children = (
+				04937AFA2C69E6BD0099D3EE /* Cell */,
 				04937AEA2C69DCA50099D3EE /* Model */,
 				04937AE92C69DC9F0099D3EE /* ViewModel */,
 				04937AE82C69DC990099D3EE /* View */,
@@ -101,6 +110,7 @@
 		04937AE92C69DC9F0099D3EE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04937AFB2C69E78D0099D3EE /* TodoListVewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 		04937AEA2C69DCA50099D3EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04937AF32C69E2E10099D3EE /* TodoListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +140,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		04937AFA2C69E6BD0099D3EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04937AF82C69E6B80099D3EE /* TodoListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +164,9 @@
 			dependencies = (
 			);
 			name = Coodinator;
+			packageProductDependencies = (
+				04937AF62C69E6420099D3EE /* SnapKit */,
+			);
 			productName = Coodinator;
 			productReference = 04937ACF2C69DA6E0099D3EE /* Coodinator.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 04937AC62C69DA6E0099D3EE;
+			packageReferences = (
+				04937AF52C69E6410099D3EE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 04937AD02C69DA6E0099D3EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,8 +227,11 @@
 				04937AD72C69DA6E0099D3EE /* TodoListViewController.swift in Sources */,
 				04937AEE2C69DF160099D3EE /* AppCoordinator.swift in Sources */,
 				04937AEC2C69DEE20099D3EE /* Coodinator.swift in Sources */,
+				04937AF92C69E6B80099D3EE /* TodoListTableViewCell.swift in Sources */,
 				04937AD32C69DA6E0099D3EE /* AppDelegate.swift in Sources */,
 				04937AF22C69E0840099D3EE /* TodoListCoordinator.swift in Sources */,
+				04937AFC2C69E78D0099D3EE /* TodoListVewModel.swift in Sources */,
+				04937AF42C69E2E10099D3EE /* TodoListModel.swift in Sources */,
 				04937AD52C69DA6E0099D3EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04937AF52C69E6410099D3EE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04937AF62C69E6420099D3EE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04937AF52C69E6410099D3EE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04937AC72C69DA6E0099D3EE /* Project object */;
 }
